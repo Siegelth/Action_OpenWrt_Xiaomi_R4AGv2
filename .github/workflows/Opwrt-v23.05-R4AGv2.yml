@@ -16,8 +16,8 @@ on:
     inputs:
       ssh:
         description: 'SSH 连接至 Actions'
-        required: false 
-        default: 'false'
+        required: true 
+        default: 'true'
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
@@ -139,6 +139,7 @@ jobs:
 
     - name: Compile the firmware
       id: compile
+      timeout-minutes: 90
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
