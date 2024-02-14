@@ -15,8 +15,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 
 # Basic Modification 
 
-# 修改openwrt登陆地址,把下面的192.168.31.1修改成你想要的就可以了
-sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
+# 修改openwrt登陆地址,把下面的192.168.44.1修改成你想要的就可以了
+sed -i 's/192.168.1.1/192.168.44.1/g' package/base-files/files/bin/config_generate
 
 # 修改默认 wifi 名称 ssid为 WiFi_R4AGv2
 sed -i 's/ssid=OpenWrt/ssid=WiFi_R4AGv2/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
